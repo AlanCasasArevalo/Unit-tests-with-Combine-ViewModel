@@ -11,7 +11,7 @@ class ViewModel: ObservableObject {
     }
     
     func set(value: Int) {
-        
+        valueSubject.send(value)
     }
     
 }
@@ -33,6 +33,17 @@ final class CombineTests: XCTestCase {
         }
         
         wait(for: [exp], timeout: 1)
+        
+        viewModel.set(value: 1)
+
+        let exp1 = expectation(description: "Wait for value")
+        
+        let cancellable1 = viewModel.valuePublisher.sink { result in
+            XCTAssertEqual(result, "1")
+            exp1.fulfill()
+        }
+        
+        wait(for: [exp1], timeout: 1)
                 
     }
 }
