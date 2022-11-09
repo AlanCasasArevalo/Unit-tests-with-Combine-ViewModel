@@ -5,7 +5,7 @@ class ViewModel: ObservableObject {
     
     var valuePublisher: AnyPublisher<String, Never> {
         valueSubject.map { value in
-            ""
+            "0"
         }
         .eraseToAnyPublisher()
     }
@@ -22,5 +22,17 @@ final class CombineTests: XCTestCase {
         
         XCTAssertNotNil(viewModel)
         XCTAssertTrue(viewModel is (any ObservableObject))
+
+        viewModel.set(value: 0)
+        
+        let exp = expectation(description: "Wait for value")
+        
+        let cancellable = viewModel.valuePublisher.sink { result in
+            XCTAssertEqual(result, "0")
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1)
+                
     }
 }
