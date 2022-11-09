@@ -13,7 +13,18 @@
 		F6F9B320291C0EA6007A10B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F9B31E291C0EA6007A10B4 /* Main.storyboard */; };
 		F6F9B322291C0EA7007A10B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F9B321291C0EA7007A10B4 /* Assets.xcassets */; };
 		F6F9B325291C0EA7007A10B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F9B323291C0EA7007A10B4 /* LaunchScreen.storyboard */; };
+		F6F9B333291C0F2F007A10B4 /* CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F9B332291C0F2F007A10B4 /* CombineTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6F9B334291C0F2F007A10B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6F9B30D291C0EA6007A10B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6F9B314291C0EA6007A10B4;
+			remoteInfo = "Unit tests with Combine ViewModel";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F6F9B315291C0EA6007A10B4 /* Unit tests with Combine ViewModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit tests with Combine ViewModel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,19 @@
 		F6F9B321291C0EA7007A10B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6F9B324291C0EA7007A10B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6F9B326291C0EA7007A10B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F9B330291C0F2F007A10B4 /* Unit tests with Combine ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit tests with Combine ViewModelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F9B332291C0F2F007A10B4 /* CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F6F9B312291C0EA6007A10B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6F9B32D291C0F2F007A10B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F9B317291C0EA6007A10B4 /* Unit tests with Combine ViewModel */,
+				F6F9B331291C0F2F007A10B4 /* Combine */,
 				F6F9B316291C0EA6007A10B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F9B315291C0EA6007A10B4 /* Unit tests with Combine ViewModel.app */,
+				F6F9B330291C0F2F007A10B4 /* Unit tests with Combine ViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +87,14 @@
 				F6F9B326291C0EA7007A10B4 /* Info.plist */,
 			);
 			path = "Unit tests with Combine ViewModel";
+			sourceTree = "<group>";
+		};
+		F6F9B331291C0F2F007A10B4 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				F6F9B332291C0F2F007A10B4 /* CombineTests.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +117,24 @@
 			productReference = F6F9B315291C0EA6007A10B4 /* Unit tests with Combine ViewModel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F6F9B32F291C0F2F007A10B4 /* Unit tests with Combine ViewModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6F9B338291C0F2F007A10B4 /* Build configuration list for PBXNativeTarget "Unit tests with Combine ViewModelTests" */;
+			buildPhases = (
+				F6F9B32C291C0F2F007A10B4 /* Sources */,
+				F6F9B32D291C0F2F007A10B4 /* Frameworks */,
+				F6F9B32E291C0F2F007A10B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6F9B335291C0F2F007A10B4 /* PBXTargetDependency */,
+			);
+			name = "Unit tests with Combine ViewModelTests";
+			productName = "Unit tests with Combine ViewModelTests";
+			productReference = F6F9B330291C0F2F007A10B4 /* Unit tests with Combine ViewModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					F6F9B314291C0EA6007A10B4 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					F6F9B32F291C0F2F007A10B4 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = F6F9B314291C0EA6007A10B4;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				F6F9B314291C0EA6007A10B4 /* Unit tests with Combine ViewModel */,
+				F6F9B32F291C0F2F007A10B4 /* Unit tests with Combine ViewModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +181,13 @@
 				F6F9B325291C0EA7007A10B4 /* LaunchScreen.storyboard in Resources */,
 				F6F9B322291C0EA7007A10B4 /* Assets.xcassets in Resources */,
 				F6F9B320291C0EA6007A10B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6F9B32E291C0F2F007A10B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +204,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6F9B32C291C0F2F007A10B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F9B333291C0F2F007A10B4 /* CombineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6F9B335291C0F2F007A10B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6F9B314291C0EA6007A10B4 /* Unit tests with Combine ViewModel */;
+			targetProxy = F6F9B334291C0F2F007A10B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F6F9B31E291C0EA6007A10B4 /* Main.storyboard */ = {
@@ -216,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,6 +371,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +400,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +411,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6F9B336291C0F2F007A10B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S23LM2WU5J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.Unit-tests-with-Combine-ViewModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit tests with Combine ViewModel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unit tests with Combine ViewModel";
+			};
+			name = Debug;
+		};
+		F6F9B337291C0F2F007A10B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S23LM2WU5J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alancasasarevalo-gmail.Unit-tests-with-Combine-ViewModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unit tests with Combine ViewModel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unit tests with Combine ViewModel";
 			};
 			name = Release;
 		};
@@ -353,6 +469,15 @@
 			buildConfigurations = (
 				F6F9B32A291C0EA7007A10B4 /* Debug */,
 				F6F9B32B291C0EA7007A10B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6F9B338291C0F2F007A10B4 /* Build configuration list for PBXNativeTarget "Unit tests with Combine ViewModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6F9B336291C0F2F007A10B4 /* Debug */,
+				F6F9B337291C0F2F007A10B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
