@@ -19,31 +19,27 @@ class ViewModel: ObservableObject {
 final class CombineTests: XCTestCase {
     func test() {
         let viewModel = ViewModel()
-        
-        XCTAssertNotNil(viewModel)
-        XCTAssertTrue(viewModel is (any ObservableObject))
-
-        viewModel.set(value: 0)
-        
-        let exp = expectation(description: "Wait for value")
-        
-        let cancellable = viewModel.valuePublisher.sink { result in
-            XCTAssertEqual(result, "0")
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 1)
+        let spy = ValueSpy(viewModel.valuePublisher)
+                
+        XCTAssertEqual(spy.values, ["0"])
         
         viewModel.set(value: 1)
+        
+        XCTAssertEqual(spy.values, ["0", "1"])
 
-        let exp1 = expectation(description: "Wait for value")
+        viewModel.set(value: 2)
         
-        let cancellable1 = viewModel.valuePublisher.sink { result in
-            XCTAssertEqual(result, "1")
-            exp1.fulfill()
+        XCTAssertEqual(spy.values, ["0", "1", "2"])
+    }
+}
+
+private class ValueSpy {
+    private(set) var values = [String]()
+    private var cancellable: AnyCancellable?
+    
+    init(_ publisher: AnyPublisher<String, Never>) {
+        cancellable = publisher.sink { [weak self] value in
+            self?.values.append(value)
         }
-        
-        wait(for: [exp1], timeout: 1)
-                
     }
 }
