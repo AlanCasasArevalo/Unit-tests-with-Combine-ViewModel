@@ -5,7 +5,7 @@ class ViewModel: ObservableObject {
     
     var valuePublisher: AnyPublisher<String, Never> {
         valueSubject.map { value in
-            "0"
+            "\(value)"
         }
         .eraseToAnyPublisher()
     }
